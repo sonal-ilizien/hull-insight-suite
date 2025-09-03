@@ -1,13 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Hull Insight Design System - Naval vessel management application */
 
 @layer base {
   :root {
+    /* Primary Color Palette */
+    --primary: 210 84% 15%; /* Navy #0A1F44 */
+    --primary-foreground: 210 40% 98%;
+    --primary-hover: 210 84% 12%;
+    
+    /* Secondary Colors */
+    --secondary: 42 25% 95%; /* Golden White #F5F2E7 */
+    --secondary-foreground: 210 84% 15%;
+    
+    /* Background System */
+    --background: 215 35% 98%; /* Neutral BG #F7F9FB */
+    --foreground: 210 84% 15%;
+    
+    /* Accent Colors */
+    --destructive: 351 95% 50%; /* Alert Red #D72638 */
+    --destructive-foreground: 210 40% 98%;
+    
+    --success: 142 71% 45%; /* Success Green #28A745 */
+    --success-foreground: 210 40% 98%;
+    
+    --warning: 45 100% 51%; /* Warning Yellow #FFC107 */
+    --warning-foreground: 210 84% 15%;
+    
+    /* Neutral System */
+    --card: 0 0% 100%;
+    --card-foreground: 210 84% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 84% 15%;
+    
+    --muted: 215 30% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 215 30% 96%;
+    --accent-foreground: 210 84% 15%;
+    
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 210 84% 15%;
+    
+    --radius: 1rem; /* 16px rounded-2xl */
+    
+    /* Sidebar System */
+    --sidebar-background: 210 84% 15%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 210 84% 15%;
+    --sidebar-accent: 210 75% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 210 75% 25%;
+    --sidebar-ring: 210 84% 15%;
+    
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(210 84% 15%), hsl(210 75% 20%));
+    --shadow-elegant: 0 10px 30px -10px hsl(210 84% 15% / 0.2);
+    --shadow-soft: 0 4px 12px -2px hsl(210 20% 50% / 0.1);
+    --shadow-card: 0 2px 8px -1px hsl(210 20% 50% / 0.08);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
+  }
+
+  .dark {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
