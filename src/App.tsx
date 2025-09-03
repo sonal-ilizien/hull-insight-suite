@@ -6,6 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainLayout } from "./components/layout/main-layout";
 import Index from "./pages/Index";
 import GlobalMasters from "./pages/GlobalMasters";
+import DockyardPlans from "./pages/DockyardPlans";
+import Surveys from "./pages/Surveys";
+import Drawing from "./pages/Drawing";
+import Reports from "./pages/Reports";
+import Users from "./pages/Users";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 
@@ -39,19 +44,46 @@ const App = () => (
           />
 
           <Route
-            path="/dockyard-plans"
+            path="/dockyard-plans/*"
             element={
               <MainLayout breadcrumb={["Hull Insight", "Dockyard Plans"]}>
-                <div className="p-6">Dockyard Plan module coming soon.</div>
+                <DockyardPlans />
               </MainLayout>
             }
           />
 
           <Route
-            path="/surveys"
+            path="/surveys/*"
             element={
               <MainLayout breadcrumb={["Hull Insight", "Hull Surveys"]}>
-                <div className="p-6">Hull Surveys module coming soon.</div>
+                <Surveys />
+              </MainLayout>
+            }
+          />
+
+          <Route
+            path="/drawing"
+            element={
+              <MainLayout breadcrumb={["Hull Insight", "Interactive Drawing"]}>
+                <Drawing />
+              </MainLayout>
+            }
+          />
+
+          <Route
+            path="/reports"
+            element={
+              <MainLayout breadcrumb={["Hull Insight", "Reports"]}>
+                <Reports />
+              </MainLayout>
+            }
+          />
+
+          <Route
+            path="/users/*"
+            element={
+              <MainLayout breadcrumb={["Hull Insight", "Users & Roles"]}>
+                <Users />
               </MainLayout>
             }
           />
